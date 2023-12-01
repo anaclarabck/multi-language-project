@@ -1,6 +1,8 @@
+import { Layout } from "@/components";
+
 export default function Home() {
   return (
-    <main>
+    <Layout>
       <h1>Multi-language challenge</h1>
       <p>
         Esse será um site multi-idiomas para um desafio da Onesight. Terá três
@@ -11,6 +13,6 @@ export default function Home() {
         <li>Sobre nós</li>
         <li>Receitas -{`>`} uma receita</li>
       </ul>
-    </main>
+    </Layout>
   );
 }
