@@ -12,8 +12,13 @@ import {
 import Link from "next/link";
 
 const LINKS = [
-  { text: "Home", href: "/", icon: HomeRounded },
-  { text: "Job Opportunity", href: "/job-opportunity", icon: WorkRounded },
+  { labelEn: "Home", labelPt: "Home", href: "/", icon: HomeRounded },
+  {
+    labelEn: "Professional Experience",
+    labelPt: "Experiência Profissional",
+    href: "/professional-experience",
+    icon: WorkRounded,
+  },
 ];
 
 export default function Index() {
@@ -24,13 +29,13 @@ export default function Index() {
       <h1>{t("title")}</h1>
       <p>{t("description")}</p>
       <List>
-        {LINKS.map(({ text, href, icon: Icon }) => (
+        {LINKS.map(({ labelPt, labelEn, href, icon: Icon }) => (
           <ListItem key={href} disablePadding>
             <ListItemButton component={Link} href={`/${locale}${href}`}>
               <ListItemIcon>
                 <Icon />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={locale === "pt" ? labelPt : labelEn} />
             </ListItemButton>
           </ListItem>
         ))}
