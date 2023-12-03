@@ -15,6 +15,8 @@ const pathNames: PathNames = {
   "/en": "Home",
   "/pt/professional-experience": "Experiência Profissional",
   "/en/professional-experience": "Professional Experience",
+  "/pt/education": "Educação",
+  "/en/education": "Education",
 };
 
 function useBreadcrumbs(): Breadcrumb[] {

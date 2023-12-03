@@ -39,5 +39,33 @@
         "skills": "Microsoft Excel, Microsoft Office, AutoCAD"
       }
     }
+  },
+  "Education": {
+    "education": "Education",
+    "schools": {
+      "trybe": {
+        "institution": "Trybe",
+        "duration": "March/2021 – March/2022",
+        "degree": "Short course",
+        "fieldOfStudy": "Web development (full stack)",
+        "description": "1500 hour course, which encompasses the following stacks: Git, GitHub, HTML, CSS, JavaScript, React, RTL, SQL and NoSQL database, MVC, API, REST, Algorithms, Data structure, Python"
+      },
+      "ipog": {
+        "institution": "IPOG",
+        "location": "João Pessoa/Brazil",
+        "duration": "2012 – 2015",
+        "degree": "MBA",
+        "fieldOfStudy": "Construction Management, Construction Technology and Quality",
+        "description": ""
+      },
+      "federalUniversityOfParaiba": {
+        "institution": "Federal University of Paraíba",
+        "location": "João Pessoa/Brazil",
+        "duration": "2007 - 2011",
+        "degree": "Bachelor degree",
+        "fieldOfStudy": "Civil Engineer",
+        "description": ""
+      }
+    }
   }
 }
