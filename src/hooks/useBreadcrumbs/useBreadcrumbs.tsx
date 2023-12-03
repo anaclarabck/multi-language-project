@@ -13,8 +13,8 @@ interface PathNames {
 const pathNames: PathNames = {
   "/pt": "Home",
   "/en": "Home",
-  "/pt/professional-experience": "Professional Experience",
-  "/en/professional-experience": "Experiência Profissional",
+  "/pt/professional-experience": "Experiência Profissional",
+  "/en/professional-experience": "Professional Experience",
 };
 
 function useBreadcrumbs(): Breadcrumb[] {
