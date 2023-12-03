@@ -21,6 +21,8 @@ function LanguageSwitcher() {
           LinkComponent={Link}
           key={locale}
           href={redirectedPathName(locale)}
+          size="small"
+          sx={{ minWidth: "3rem" }}
         >
           {locale.toUpperCase()}
         </Button>
