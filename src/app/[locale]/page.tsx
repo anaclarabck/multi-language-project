@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
 import Link from "next/link";
 
@@ -26,8 +27,10 @@ export default function Index() {
   const t = useTranslations("Index");
   return (
     <Container maxWidth="lg">
-      <h1>{t("title")}</h1>
-      <p>{t("description")}</p>
+      <Typography variant="h4" paddingTop={2}>
+        {t("title")}
+      </Typography>
+      <Typography>{t("description")}</Typography>
       <List>
         {LINKS.map(({ labelPt, labelEn, href, icon: Icon }) => (
           <ListItem key={href} disablePadding>
