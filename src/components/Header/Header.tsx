@@ -1,5 +1,5 @@
-import { LanguageRounded } from "@mui/icons-material";
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 function Header() {
   return (
@@ -10,17 +10,7 @@ function Header() {
           <Typography variant="h5" color="whitesmoke">
             Onesight
           </Typography>
-          <Button
-            variant="text"
-            disableElevation
-            size="small"
-            // onClick={() => {
-            //   alert("clicked");
-            // }}
-            startIcon={<LanguageRounded />}
-          >
-            EN-US
-          </Button>
+          <LanguageSwitcher />
         </Grid>
       </Container>
     </section>
