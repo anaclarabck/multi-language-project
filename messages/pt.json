@@ -1,39 +1,42 @@
 {
   "Index": {
     "title": "Olá mundo!",
-    "description": "Esse é um site multi-idiomas para um desafio da Onesight."
+    "description": "Esse é um site multi-idiomas para um desafio da Onesight.",
+    "home": "Home",
+    "professionalExperience": "Professional Experience"
   },
-  "JobOpportunity": {
-    "jobOpening": "A Vaga",
-    "jobDescription": "Conhece NextJS ou ReactJS e gostaria de trabalhar em um projeto dinâmico, em evolução continuada e focando em boas práticas? A posição é para um recurso de nível Junior.",
-    "skills": "Habilidades",
-    "skillsDescription": "Os seguintes conhecimentos serão utilizados no projeto (não todos são necessários):",
-    "frontend": "Frontend",
-    "frontendSkills": ["NextJS", "ReactJS", "VueJS"],
-    "backend": "Backend",
-    "backendSkills": ["NextJS", "MariaDB (Mysql)", "PHP"],
-    "development": "Desenvolvimento",
-    "developmentSkills1": [
-      "AWS EC2 + RDS + Cloud balancing",
-      "Docker",
-      "CI/CD Deployment",
-      "Gitlab CI",
-      "Bash scripts + Ansistrano",
-      "GIT + Gitflow",
-      "Code coverage & Testing"
-    ],
-    "responsibilities": "Responsabilidades",
-    "responsibilitiesDescription": "Trabalhar no desenvolvimento e melhoria de um novo frontend de um projeto em produção. Com suporte do time alocado no projeto e cross-team work. Trabalhar com o time para melhorar o conhecimento geral. Foco em um projeto dinâmico com releases rápidas e melhoria constante. Aprendizado de novas tecnologias e caminho Fullstack.",
-    "qualifications": "Qualificações",
-    "qualificationsDescription": "Ao menos 1 ano de experiência com Javascript (principalmente React).",
-    "jobDetails": "Dados da Vaga",
-    "jobDetailsDescription": [
-      "Full remote com horário flexível (alinhar com o time para execução das Dailys)",
-      "Contratação: PJ",
-      "Possível contrato 4 dias / 5 dias por semana",
-      "Modelo de férias Europeu (2 dias por mês e podendo usar as férias já a partir do segundo mês)",
-      "Crescimento anual planejado acima da média de mercado",
-      "Planejamento de evolução de carreira"
-    ]
+  "Header": {
+    "title": "Página Multi-idiomas"
+  },
+  "ProfessionalExperience": {
+    "professionalExperience": "Expriência Profissional",
+    "experiences": {
+      "trybe": {
+        "company": "Trybe",
+        "position": "Desenvolvedor Web Frontend",
+        "employmentType": "Tempo integral",
+        "duration": "Abr 2022 - Jun 2023",
+        "responsibilities": "Como parte das equipes responsáveis pelo conteúdo do curso e avaliações, trabalhei fazendo melhorias, implementando novas funcionalidades, testando, corrigindo bugs e refatorando. Além disso, como ex-aluno da Trybe, tive a oportunidade de contribuir para aprimorar a experiência do aluno, trazendo tanto uma perspectiva do usuário quanto do desenvolvedor.",
+        "skills": "React, Typescript, GraphQL, React Testing Library, Redux, Mantine, Github, HTML, CSS"
+      },
+      "jungleDevs": {
+        "company": "Jungle Devs",
+        "position": "Engenheiro de Software Associado",
+        "employmentType": "Tempo integral",
+        "duration": "Out 2021 - Abr 2022",
+        "project": "Canal Digital - Woliver",
+        "projectDescription": "Canal Digital é uma plataforma de aluguel de imóveis cujo objetivo é reduzir a burocracia ao alugar um imóvel. Consiste em dois sites, um para o futuro cliente e outro para agências imobiliárias.",
+        "responsibilities": "Enquanto trabalhava no Canal Digital, ajudei na manutenção, melhoria e adição de funcionalidades ao aplicativo. Este é um projeto de produção que segue um fluxo Ágil onde trabalhamos em sprints de duas semanas. A equipe é bastante dinâmica e focamos no feedback do cliente para continuar melhorando a usabilidade e o desempenho das funcionalidades. Por fim, este portal tem muitas integrações com diferentes sistemas legados das várias agências e é sempre fundamental garantir que todos estejam alinhados e seguindo bons processos de comunicação para evitar que bugs cheguem à produção.",
+        "skills": "React Native, Redux, ReactJS, AMP, Scrum, Kanban, Typescript, Javascript, ContextAPI"
+      },
+      "alliance": {
+        "company": "Alliance Construtora",
+        "position": "Engenheiro Civil",
+        "employmentType": "Tempo integral",
+        "duration": "Jan 2012 - Ago 2017",
+        "responsibilities": "Supervisão de construção; verificação de serviços; análise de projetos; levantamento e orçamento; aprovação e monitoramento de pedidos de compra e ordens; treinamento de funcionários; planejamento de construção; análise de mão de obra; aplicação e monitoramento da qualidade da construção; atendimento ao cliente pós-entrega.",
+        "skills": "Microsoft Excel, Microsoft Office, AutoCAD"
+      }
+    }
   }
 }
