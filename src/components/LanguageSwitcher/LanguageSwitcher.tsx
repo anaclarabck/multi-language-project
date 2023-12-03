@@ -3,9 +3,11 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { Button, Link, Stack } from "@mui/material";
 import { locales } from "@/navigation";
+import { useLocale } from "next-intl";
 
 function LanguageSwitcher() {
   const pathName = usePathname();
+  const locale = useLocale();
 
   const redirectedPathName = (locale: string) => {
     if (!pathName) return "/";
@@ -16,15 +18,16 @@ function LanguageSwitcher() {
 
   return (
     <Stack direction="row" spacing={2}>
-      {locales.map((locale) => (
+      {locales.map((localeItem) => (
         <Button
           LinkComponent={Link}
-          key={locale}
-          href={redirectedPathName(locale)}
+          key={localeItem}
+          href={redirectedPathName(localeItem)}
           size="small"
           sx={{ minWidth: "3rem" }}
+          variant={locale === localeItem ? "outlined" : "text"}
         >
-          {locale.toUpperCase()}
+          {localeItem.toUpperCase()}
         </Button>
       ))}
     </Stack>
