@@ -1,0 +1,39 @@
+{
+  "Index": {
+    "title": "Hello world!",
+    "description": "This is a multi-language site for a Onesight challenge."
+  },
+  "JobOpportunity": {
+    "jobOpening": "The Position",
+    "jobDescription": "Do you know NextJS or ReactJS and would like to work on a dynamic project, in continuous evolution, focusing on good practices? The position is for an entry level resource.",
+    "skills": "Skills",
+    "skillsDescription": "The following knowledge will be used in the project (not all are necessary):",
+    "frontend": "Frontend",
+    "frontendSkills": ["NextJS", "ReactJS", "VueJS"],
+    "backend": "Backend",
+    "backendSkills": ["NextJS", "MariaDB (Mysql)", "PHP"],
+    "development": "Development",
+    "developmentSkills1": [
+      "AWS EC2 + RDS + Cloud balancing",
+      "Docker",
+      "CI/CD Deployment",
+      "Gitlab CI",
+      "Bash scripts + Ansistrano",
+      "GIT + Gitflow",
+      "Code coverage & Testing"
+    ],
+    "responsibilities": "Responsibilities",
+    "responsibilitiesDescription": "Work on the development and improvement of a new frontend for a project in production. With support from the team allocated to the project and cross-team work. Work with the team to improve general knowledge. Focus on a dynamic project with quick releases and constant improvement. Learning new technologies and Fullstack path.",
+    "qualifications": "Qualifications",
+    "qualificationsDescription": "At least 1 year of experience with Javascript (mainly React).",
+    "jobDetails": "Job Details",
+    "jobDetailsDescription": [
+      "Full remote with flexible schedule (align with the team for the execution of Dailys)",
+      "Hiring: PJ",
+      "Possible contract 4 days / 5 days per week",
+      "European vacation model (2 days per month and being able to use the vacation already from the second month)",
+      "Planned annual growth above market average",
+      "Career evolution planning"
+    ]
+  }
+}
