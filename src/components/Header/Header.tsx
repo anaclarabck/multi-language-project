@@ -1,19 +1,22 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Divider, Grid, Typography } from "@mui/material";
 import { LanguageSwitcher } from "../LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 function Header() {
+  const t = useTranslations("Header");
   return (
-    // TODO: criar um componente para section
-    <section style={{ backgroundColor: "black" }}>
-      <Container maxWidth="lg">
+    <>
+      <Container
+        maxWidth="lg"
+        sx={{ paddingBottom: "0.2rem", paddingTop: "0.2rem" }}
+      >
         <Grid container justifyContent="space-between" alignItems="center">
-          <Typography variant="h5" color="whitesmoke">
-            Onesight
-          </Typography>
+          <Typography variant="h6">{t("title")}</Typography>
           <LanguageSwitcher />
         </Grid>
       </Container>
-    </section>
+      <Divider />
+    </>
   );
 }
 
