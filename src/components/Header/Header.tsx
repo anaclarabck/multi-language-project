@@ -14,9 +14,9 @@ function Header() {
             variant="text"
             disableElevation
             size="small"
-            onClick={() => {
-              alert("clicked");
-            }}
+            // onClick={() => {
+            //   alert("clicked");
+            // }}
             startIcon={<LanguageRounded />}
           >
             EN-US
