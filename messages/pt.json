@@ -1,5 +1,39 @@
 {
   "Index": {
-    "title": "Olá mundo!"
+    "title": "Olá mundo!",
+    "description": "Esse é um site multi-idiomas para um desafio da Onesight."
+  },
+  "JobOpportunity": {
+    "jobOpening": "A Vaga",
+    "jobDescription": "Conhece NextJS ou ReactJS e gostaria de trabalhar em um projeto dinâmico, em evolução continuada e focando em boas práticas? A posição é para um recurso de nível Junior.",
+    "skills": "Habilidades",
+    "skillsDescription": "Os seguintes conhecimentos serão utilizados no projeto (não todos são necessários):",
+    "frontend": "Frontend",
+    "frontendSkills": ["NextJS", "ReactJS", "VueJS"],
+    "backend": "Backend",
+    "backendSkills": ["NextJS", "MariaDB (Mysql)", "PHP"],
+    "development": "Desenvolvimento",
+    "developmentSkills1": [
+      "AWS EC2 + RDS + Cloud balancing",
+      "Docker",
+      "CI/CD Deployment",
+      "Gitlab CI",
+      "Bash scripts + Ansistrano",
+      "GIT + Gitflow",
+      "Code coverage & Testing"
+    ],
+    "responsibilities": "Responsabilidades",
+    "responsibilitiesDescription": "Trabalhar no desenvolvimento e melhoria de um novo frontend de um projeto em produção. Com suporte do time alocado no projeto e cross-team work. Trabalhar com o time para melhorar o conhecimento geral. Foco em um projeto dinâmico com releases rápidas e melhoria constante. Aprendizado de novas tecnologias e caminho Fullstack.",
+    "qualifications": "Qualificações",
+    "qualificationsDescription": "Ao menos 1 ano de experiência com Javascript (principalmente React).",
+    "jobDetails": "Dados da Vaga",
+    "jobDetailsDescription": [
+      "Full remote com horário flexível (alinhar com o time para execução das Dailys)",
+      "Contratação: PJ",
+      "Possível contrato 4 dias / 5 dias por semana",
+      "Modelo de férias Europeu (2 dias por mês e podendo usar as férias já a partir do segundo mês)",
+      "Crescimento anual planejado acima da média de mercado",
+      "Planejamento de evolução de carreira"
+    ]
   }
 }
