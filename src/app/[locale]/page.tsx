@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { HomeRounded, WorkRounded } from "@mui/icons-material";
+import { HomeRounded, SchoolRounded, WorkRounded } from "@mui/icons-material";
 import {
   Container,
   List,
@@ -14,6 +14,12 @@ import Link from "next/link";
 
 const LINKS = [
   { labelEn: "Home", labelPt: "Home", href: "/", icon: HomeRounded },
+  {
+    labelEn: "Education",
+    labelPt: "Educação",
+    href: "/education",
+    icon: SchoolRounded,
+  },
   {
     labelEn: "Professional Experience",
     labelPt: "Experiência Profissional",
