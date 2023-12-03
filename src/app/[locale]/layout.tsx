@@ -1,7 +1,6 @@
 import { Header } from "@/components";
 import { locales } from "@/navigation";
 import { useLocale } from "next-intl";
-import Head from "next/head";
 import { notFound } from "next/navigation";
 
 export default function LocaleLayout({
@@ -14,10 +13,10 @@ export default function LocaleLayout({
   if (!locales.includes(locale as any)) notFound();
   return (
     <html lang={locale}>
-      <Head>
+      <head>
         <title>next-intl</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-      </Head>
+      </head>
       <body>
         <Header />
         <main>{children}</main>
