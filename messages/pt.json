@@ -9,7 +9,7 @@
     "title": "Página Multi-idiomas"
   },
   "ProfessionalExperience": {
-    "professionalExperience": "Experiência Profissional",
+    "title": "Experiência Profissional",
     "experiences": {
       "trybe": {
         "company": "Trybe",
@@ -40,7 +40,7 @@
     }
   },
   "Education": {
-    "education": "Educação",
+    "title": "Educação",
     "schools": {
       "trybe": {
         "institution": "Trybe",

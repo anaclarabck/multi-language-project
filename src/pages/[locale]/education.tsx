@@ -43,11 +43,11 @@ export default function Education() {
   const educationKeys = ["trybe", "ipog", "federalUniversityOfParaiba"];
 
   return (
-    <PageLayout>
+    <PageLayout title={t("title")}>
       <Container maxWidth="lg">
         <Breadcrumbs />
         <Typography variant="h4" component="h2" gutterBottom>
-          {t("education")}
+          {t("title")}
         </Typography>
         {educationKeys.map((key) => (
           <EducationCard

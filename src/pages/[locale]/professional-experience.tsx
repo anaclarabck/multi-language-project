@@ -46,11 +46,11 @@ export default function ProfessionalExperience() {
   const experienceKeys = ["trybe", "jungleDevs", "alliance"];
 
   return (
-    <PageLayout>
+    <PageLayout title={t("title")}>
       <Container maxWidth="lg">
         <Breadcrumbs />
         <Typography variant="h4" component="h2" gutterBottom>
-          {t("professionalExperience")}
+          {t("title")}
         </Typography>
         {experienceKeys.map((key) => (
           <ExperienceCard
