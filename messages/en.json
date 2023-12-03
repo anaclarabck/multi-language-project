@@ -8,9 +8,8 @@
   "Header": {
     "title": "Multi-language App"
   },
-
   "ProfessionalExperience": {
-    "professionalExperience": "Professional Experience",
+    "title": "Professional Experience",
     "experiences": {
       "trybe": {
         "company": "Trybe",
@@ -41,7 +40,7 @@
     }
   },
   "Education": {
-    "education": "Education",
+    "title": "Education",
     "schools": {
       "trybe": {
         "institution": "Trybe",
