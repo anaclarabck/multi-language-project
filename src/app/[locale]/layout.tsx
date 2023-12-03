@@ -1,6 +1,6 @@
 import { Header } from "@/components";
 import { locales } from "@/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 
 export default function LocaleLayout({
@@ -9,12 +9,13 @@ export default function LocaleLayout({
   children: React.ReactNode;
 }) {
   const locale = useLocale();
+  const t = useTranslations("Index");
 
   if (!locales.includes(locale as any)) notFound();
   return (
     <html lang={locale}>
       <head>
-        <title>next-intl</title>
+        <title>{t("title")}</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </head>
       <body>
