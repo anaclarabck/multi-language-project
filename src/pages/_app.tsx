@@ -12,6 +12,7 @@ function App({ Component, pageProps, router }: Props) {
     <NextIntlClientProvider
       locale={(router.query?.locale as string) ?? "en"}
       messages={pageProps.messages}
+      timeZone="America/Recife"
     >
       {/* <RootLayout> */}
       <Component {...pageProps} />
