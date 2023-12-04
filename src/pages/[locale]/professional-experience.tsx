@@ -21,7 +21,7 @@ function ExperienceCard({
   stacks,
 }: Experience) {
   return (
-    <Card sx={{ minWidth: 275, marginBottom: 2 }}>
+    <Card sx={{ minWidth: 275, mb: 2 }}>
       <CardContent>
         <Typography variant="h6" component="h2">
           {company}
