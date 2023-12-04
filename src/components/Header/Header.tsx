@@ -6,10 +6,7 @@ function Header() {
   const t = useTranslations("Header");
   return (
     <>
-      <Container
-        maxWidth="lg"
-        sx={{ paddingBottom: "0.2rem", paddingTop: "0.2rem" }}
-      >
+      <Container maxWidth="lg" sx={{ pb: "0.2rem", pt: "0.2rem" }}>
         <Grid container justifyContent="space-between" alignItems="center">
           <Typography variant="h6">{t("title")}</Typography>
           <LanguageSwitcher />
