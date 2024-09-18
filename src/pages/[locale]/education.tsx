@@ -49,6 +49,11 @@ export default function Education() {
         <Typography variant="h4" component="h2" gutterBottom>
           {t("title")}
         </Typography>
+        <div>
+          <video controls src="/videos/paag.mp4" style={{ height: "200px" }}>
+            Seu navegador não suporte a tag de vídeo.
+          </video>
+        </div>
         {educationKeys.map((key) => (
           <EducationCard
             institution={t(`schools.${key}.institution`)}
