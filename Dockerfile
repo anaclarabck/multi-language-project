@@ -1,8 +1,8 @@
-FROM node:16
+FROM node:20
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 COPY . .
-RUN npm run build
-CMD ["npm", "start"]
+RUN yarn build
+CMD ["yarn", "start"]
 EXPOSE 3000
