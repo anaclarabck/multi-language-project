@@ -13,6 +13,9 @@ const config = {
     "^.+\\.(js|jsx|ts|tsx)$": "ts-jest",
   },
   testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+  },
 };
 
 module.exports = createJestConfig(config);

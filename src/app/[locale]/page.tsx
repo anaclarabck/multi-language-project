@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { SchoolRounded, WorkRounded } from "@mui/icons-material";
@@ -32,7 +33,7 @@ export default function Index() {
   const t = useTranslations("Index");
   return (
     <Container maxWidth="lg">
-      <Typography variant="h4" paddingTop={2}>
+      <Typography variant="h4" sx={{ pt: 2 }}>
         {t("title")}
       </Typography>
       <Typography>{t("description")}</Typography>

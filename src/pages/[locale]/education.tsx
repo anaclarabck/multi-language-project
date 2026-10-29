@@ -76,6 +76,6 @@ export function getStaticProps({ params }: { params: { locale: string } }) {
 export async function getStaticPaths() {
   return {
     paths: [{ params: { locale: "en" } }, { params: { locale: "pt" } }],
-    fallback: true,
+    fallback: false,
   };
 }
