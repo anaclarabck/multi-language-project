@@ -7,7 +7,10 @@ function Header() {
   return (
     <>
       <Container maxWidth="lg" sx={{ pb: "0.2rem", pt: "0.2rem" }}>
-        <Grid container justifyContent="space-between" alignItems="center">
+        <Grid
+          container
+          sx={{ justifyContent: "space-between", alignItems: "center" }}
+        >
           <Typography variant="h6">{t("title")}</Typography>
           <LanguageSwitcher />
         </Grid>

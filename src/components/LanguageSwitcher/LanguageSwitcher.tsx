@@ -2,7 +2,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { Button, Link, Stack } from "@mui/material";
-import { locales } from "@/navigation";
+import { routing } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 
 function LanguageSwitcher() {
@@ -18,7 +18,7 @@ function LanguageSwitcher() {
 
   return (
     <Stack direction="row" spacing={2}>
-      {locales.map((localeItem) => (
+      {routing.locales.map((localeItem) => (
         <Button
           LinkComponent={Link}
           key={localeItem}

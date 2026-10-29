@@ -1,6 +1,11 @@
 import { Header } from "@/components";
-import { locales } from "@/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { routing } from "@/i18n/routing";
+import {
+  hasLocale,
+  NextIntlClientProvider,
+  useLocale,
+  useTranslations,
+} from "next-intl";
 import { notFound } from "next/navigation";
 
 export default function LocaleLayout({
@@ -11,7 +16,7 @@ export default function LocaleLayout({
   const locale = useLocale();
   const t = useTranslations("Index");
 
-  if (!locales.includes(locale as any)) notFound();
+  if (!hasLocale(routing.locales, locale)) notFound();
   return (
     <html lang={locale}>
       <head>
@@ -19,8 +24,10 @@ export default function LocaleLayout({
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
+        <NextIntlClientProvider>
+          <Header />
+          <main>{children}</main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Breadcrumbs as MUIBreadcrumbs, Link, Box } from "@mui/material";
 import { useBreadcrumbs } from "@/hooks";
@@ -7,7 +8,7 @@ const Breadcrumbs: React.FC = () => {
   const breadcrumbs = useBreadcrumbs();
 
   return (
-    <Box paddingTop={2} paddingBottom={2}>
+    <Box sx={{ pt: 2, pb: 2 }}>
       <MUIBreadcrumbs
         aria-label="breadcrumb"
         separator={<KeyboardArrowRightRounded />}

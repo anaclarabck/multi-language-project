@@ -9,6 +9,9 @@ jest.mock("next/navigation", () => ({
 jest.mock("next-intl", () => ({
   useLocale: jest.fn(),
 }));
+jest.mock("@/i18n/routing", () => ({
+  routing: { locales: ["en", "pt"] },
+}));
 
 describe("LanguageSwitcher", () => {
   const mockUsePathname = require("next/navigation").usePathname;
