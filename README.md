@@ -4,11 +4,24 @@ Check out the application live at [Multi-language-project](https://multi-languag
 
 ## Getting Started
 
-This project is configured to run using Node.js version 16, please confirm that you are using it.
+This project requires Node.js 22 or later.
 
-Make sure you have [Docker](https://www.docker.com/get-started) installed on your machine for a consistent development environment.
+### Running locally
+
+```bash
+yarn install
+yarn dev
+```
+
+Other useful scripts:
+
+- `yarn build` / `yarn start`: build and serve the production app.
+- `yarn lint`: run ESLint.
+- `yarn test`: run the Jest test suite.
 
 ### Running with Docker
+
+Make sure you have [Docker](https://www.docker.com/get-started) installed on your machine for a consistent development environment.
 
 1. **Build the Docker Image**:  
    In the project directory, build the Docker image using the following command:
@@ -33,6 +46,7 @@ Make sure you have [Docker](https://www.docker.com/get-started) installed on you
 ├── Dockerfile # Instructions to build a Docker image for the project.
 ├── README.md # Documentation about the project.
 ├── docker-compose.yml # Docker Compose configuration file.
+├── eslint.config.mjs # ESLint configuration.
 ├── jest.config.js # Configuration file for Jest testing framework.
 ├── jest.setup.js # Setup file for Jest, including any global configurations for tests.
 ├── messages # Localization files.
@@ -41,6 +55,7 @@ Make sure you have [Docker](https://www.docker.com/get-started) installed on you
 ├── next-env.d.ts # TypeScript declaration file for Next.js.
 ├── next.config.js # Configuration file for Next.js.
 ├── package.json # NPM package configuration, listing all dependencies and scripts.
+├── postcss.config.mjs # PostCSS configuration, used to load Tailwind CSS.
 ├── src # Source code of the project.
 │ ├── app # Application specific components and logic.
 │ │ └── [locale] # Locale-specific layouts and pages.
@@ -53,12 +68,16 @@ Make sure you have [Docker](https://www.docker.com/get-started) installed on you
 │ │ └── PageLayout # Layout component for pages.
 │ ├── hooks # Custom React hooks.
 │ │ └── useBreadcrumbs # Hook for generating breadcrumb paths.
-│ ├── i18n.ts # Internationalization setup.
-│ ├── middleware.ts # Custom Next.js middleware.
-│ ├── navigation.ts # Navigation-related configurations.
-│ └── pages # Next.js pages and routing.
-│ ├── [locale] # Locale-specific pages.
-│ └── _app.tsx # Main application component for Next.js.
+│ ├── i18n # Internationalization setup.
+│ │ ├── navigation.ts # Locale-aware navigation helpers.
+│ │ ├── request.ts # Per-request locale and messages configuration.
+│ │ └── routing.ts # Supported locales and routing configuration.
+│ ├── pages # Next.js pages and routing.
+│ │ ├── [locale] # Locale-specific pages.
+│ │ └── _app.tsx # Main application component for Next.js.
+│ ├── proxy.ts # Next.js proxy (formerly middleware) for locale detection.
+│ └── styles
+│   └── globals.css # Global styles and Tailwind CSS entry point.
 └── tsconfig.json # TypeScript configuration file.
 ```
 
@@ -71,3 +90,5 @@ This project is built using various technologies:
 - [Vercel](https://vercel.com/): A platform for frontend frameworks and static sites.
 - [next-intl](https://github.com/amannn/next-intl): Internationalization library for Next.js.
 - [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
+- [Lucide](https://lucide.dev/): An open-source icon library.
+- [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/): Unit and component testing.
