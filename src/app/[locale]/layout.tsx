@@ -1,3 +1,4 @@
+import "@/styles/globals.css";
 import { Header } from "@/components";
 import { routing } from "@/i18n/routing";
 import {

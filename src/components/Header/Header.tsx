@@ -1,22 +1,15 @@
-import { Container, Divider, Grid, Typography } from "@mui/material";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
 function Header() {
   const t = useTranslations("Header");
   return (
-    <>
-      <Container maxWidth="lg" sx={{ pb: "0.2rem", pt: "0.2rem" }}>
-        <Grid
-          container
-          sx={{ justifyContent: "space-between", alignItems: "center" }}
-        >
-          <Typography variant="h6">{t("title")}</Typography>
-          <LanguageSwitcher />
-        </Grid>
-      </Container>
-      <Divider />
-    </>
+    <header className="border-b border-gray-200">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-1 sm:px-6">
+        <h1 className="text-xl font-medium">{t("title")}</h1>
+        <LanguageSwitcher />
+      </div>
+    </header>
   );
 }
 

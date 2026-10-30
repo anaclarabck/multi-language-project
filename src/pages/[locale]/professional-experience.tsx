@@ -1,5 +1,4 @@
 import { Breadcrumbs, PageLayout } from "@/components";
-import { Card, CardContent, Container, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import React from "react";
 
@@ -21,23 +20,15 @@ function ExperienceCard({
   stacks,
 }: Experience) {
   return (
-    <Card sx={{ minWidth: 275, mb: 2 }}>
-      <CardContent>
-        <Typography variant="h6" component="h2">
-          {company}
-        </Typography>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {employmentType} | {duration}
-        </Typography>
-        <Typography variant="h5" component="div">
-          {position}
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {stacks}
-        </Typography>
-        <Typography variant="body2">{responsibilities}</Typography>
-      </CardContent>
-    </Card>
+    <article className="mb-4 min-w-[275px] rounded bg-white p-4 shadow">
+      <h2 className="text-xl font-medium">{company}</h2>
+      <p className="mb-1 text-sm text-gray-600">
+        {employmentType} | {duration}
+      </p>
+      <div className="text-2xl">{position}</div>
+      <p className="mb-3 text-gray-600">{stacks}</p>
+      <p className="text-sm">{responsibilities}</p>
+    </article>
   );
 }
 
@@ -47,11 +38,9 @@ export default function ProfessionalExperience() {
 
   return (
     <PageLayout title={t("title")}>
-      <Container maxWidth="lg">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Breadcrumbs />
-        <Typography variant="h4" component="h2" gutterBottom>
-          {t("title")}
-        </Typography>
+        <h2 className="mb-2 text-3xl">{t("title")}</h2>
         {experienceKeys.map((key) => (
           <ExperienceCard
             company={t(`experiences.${key}.company`)}
@@ -63,7 +52,7 @@ export default function ProfessionalExperience() {
             stacks={t(`experiences.${key}.skills`)}
           />
         ))}
-      </Container>
+      </div>
     </PageLayout>
   );
 }

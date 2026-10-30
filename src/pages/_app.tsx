@@ -1,4 +1,5 @@
 // import RootLayout from "@/app/layout";
+import "@/styles/globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { AppProps } from "next/app";
 import { NextRouter, withRouter } from "next/router";

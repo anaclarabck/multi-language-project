@@ -70,4 +70,4 @@ This project is built using various technologies:
 - [Docker](https://www.docker.com/): A platform for developing, shipping, and running applications.
 - [Vercel](https://vercel.com/): A platform for frontend frameworks and static sites.
 - [next-intl](https://github.com/amannn/next-intl): Internationalization library for Next.js.
-- [MUI (Material-UI)](https://mui.com/): A popular React UI framework.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.

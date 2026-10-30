@@ -29,13 +29,13 @@ describe("LanguageSwitcher", () => {
     mockUsePathname.mockReturnValue("/current-path");
     mockUseLocale.mockReturnValue("en");
     render(<LanguageSwitcher />);
-    expect(screen.getByText("EN")).toHaveClass("MuiButton-outlined");
+    expect(screen.getByText("EN")).toHaveAttribute("aria-current", "true");
   });
 
   it("should not highlight the current locale", () => {
     mockUsePathname.mockReturnValue("/current-path");
     mockUseLocale.mockReturnValue("pt");
     render(<LanguageSwitcher />);
-    expect(screen.queryByText("EN")).not.toHaveClass("MuiButton-outlined");
+    expect(screen.getByText("EN")).not.toHaveAttribute("aria-current");
   });
 });

@@ -1,30 +1,21 @@
 "use client";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { SchoolRounded, WorkRounded } from "@mui/icons-material";
-import {
-  Container,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
 import Link from "next/link";
+import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 
 const LINKS = [
   {
     labelEn: "Education",
     labelPt: "Educação",
     href: "/education",
-    icon: SchoolRounded,
+    icon: GraduationCap,
   },
   {
     labelEn: "Professional Experience",
     labelPt: "Experiência Profissional",
     href: "/professional-experience",
-    icon: WorkRounded,
+    icon: BriefcaseBusiness,
   },
 ];
 
@@ -32,23 +23,22 @@ export default function Index() {
   const locale = useLocale();
   const t = useTranslations("Index");
   return (
-    <Container maxWidth="lg">
-      <Typography variant="h4" sx={{ pt: 2 }}>
-        {t("title")}
-      </Typography>
-      <Typography>{t("description")}</Typography>
-      <List>
+    <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <h2 className="pt-4 text-3xl">{t("title")}</h2>
+      <p>{t("description")}</p>
+      <ul className="py-2">
         {LINKS.map(({ labelPt, labelEn, href, icon: Icon }) => (
-          <ListItem key={href} disablePadding>
-            <ListItemButton component={Link} href={`/${locale}${href}`}>
-              <ListItemIcon>
-                <Icon />
-              </ListItemIcon>
-              <ListItemText primary={locale === "pt" ? labelPt : labelEn} />
-            </ListItemButton>
-          </ListItem>
+          <li key={href}>
+            <Link
+              className="flex items-center px-4 py-2 transition-colors hover:bg-gray-100"
+              href={`/${locale}${href}`}
+            >
+              <Icon className="mr-8 size-6 shrink-0 text-gray-500" />
+              {locale === "pt" ? labelPt : labelEn}
+            </Link>
+          </li>
         ))}
-      </List>
-    </Container>
+      </ul>
+    </div>
   );
 }
