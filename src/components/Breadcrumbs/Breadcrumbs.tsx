@@ -1,29 +1,29 @@
 "use client";
 import React from "react";
-import { Breadcrumbs as MUIBreadcrumbs, Link, Box } from "@mui/material";
+import Link from "next/link";
 import { useBreadcrumbs } from "@/hooks";
-import { KeyboardArrowRightRounded } from "@mui/icons-material";
+import { ChevronRight } from "lucide-react";
 
 const Breadcrumbs: React.FC = () => {
   const breadcrumbs = useBreadcrumbs();
 
   return (
-    <Box sx={{ pt: 2, pb: 2 }}>
-      <MUIBreadcrumbs
-        aria-label="breadcrumb"
-        separator={<KeyboardArrowRightRounded />}
-      >
-        {breadcrumbs.map(({ label, path }, index) =>
-          index + 1 < breadcrumbs.length ? (
-            <Link key={index} color="inherit" href={path}>
-              {label}
-            </Link>
-          ) : (
-            <span key={index}>{label}</span>
-          )
-        )}
-      </MUIBreadcrumbs>
-    </Box>
+    <nav aria-label="breadcrumb" className="py-4">
+      <ol className="flex flex-wrap items-center text-gray-600">
+        {breadcrumbs.map(({ label, path }, index) => (
+          <li key={index} className="flex items-center">
+            {index > 0 && <ChevronRight aria-hidden="true" className="mx-2 size-5" />}
+            {index + 1 < breadcrumbs.length ? (
+              <Link className="hover:underline" href={path}>
+                {label}
+              </Link>
+            ) : (
+              <span className="text-gray-900">{label}</span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
   );
 };
 

@@ -1,5 +1,4 @@
 import { Breadcrumbs, PageLayout } from "@/components";
-import { Card, CardContent, Container, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import React from "react";
 
@@ -19,22 +18,14 @@ function EducationCard({
   description,
 }: Education) {
   return (
-    <Card sx={{ minWidth: 275, mb: 2 }}>
-      <CardContent>
-        <Typography variant="h6" component="h2">
-          {institution} - {degree}
-        </Typography>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary">
-          {duration}
-        </Typography>
-        <Typography variant="body2" sx={{ fontWeight: 600 }}>
-          {fieldOfStudy}
-        </Typography>
-        {description && (
-          <Typography sx={{ mb: 1.5, fontSize: 14 }}>{description}</Typography>
-        )}
-      </CardContent>
-    </Card>
+    <article className="mb-4 min-w-[275px] rounded bg-white p-4 shadow">
+      <h2 className="text-xl font-medium">
+        {institution} - {degree}
+      </h2>
+      <p className="text-sm text-gray-600">{duration}</p>
+      <p className="text-sm font-semibold">{fieldOfStudy}</p>
+      {description && <p className="mb-3 text-sm">{description}</p>}
+    </article>
   );
 }
 
@@ -44,11 +35,9 @@ export default function Education() {
 
   return (
     <PageLayout title={t("title")}>
-      <Container maxWidth="lg">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Breadcrumbs />
-        <Typography variant="h4" component="h2" gutterBottom>
-          {t("title")}
-        </Typography>
+        <h2 className="mb-2 text-3xl">{t("title")}</h2>
         {educationKeys.map((key) => (
           <EducationCard
             institution={t(`schools.${key}.institution`)}
@@ -59,7 +48,7 @@ export default function Education() {
             description={t(`schools.${key}.description`)}
           />
         ))}
-      </Container>
+      </div>
     </PageLayout>
   );
 }
